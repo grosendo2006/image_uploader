@@ -1,7 +1,7 @@
-defmodule ImageUploader.Producer do
+defmodule ImageUploader.UploadAws.Producer do
   use GenStage
-  alias ImageUploader.ConsumersSupervisor
-  alias ImageUploader.Consumer
+  alias ImageUploader.UploadAws.ConsumersSupervisor
+  alias ImageUploader.UploadAws.Consumer
 
   @consumer_pool 3
   def start_link(state) do

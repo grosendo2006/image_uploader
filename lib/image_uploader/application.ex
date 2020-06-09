@@ -15,8 +15,8 @@ defmodule ImageUploader.Application do
       {Phoenix.PubSub, name: ImageUploader.PubSub},
       # Start the Endpoint (http/https)
       ImageUploaderWeb.Endpoint,
-      ImageUploader.ConsumersSupervisor,
-      {ImageUploader.Producer, []}
+      ImageUploader.UploadAws.ConsumersSupervisor,
+      {ImageUploader.UploadAws.Producer, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

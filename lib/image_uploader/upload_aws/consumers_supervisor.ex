@@ -1,4 +1,4 @@
-defmodule ImageUploader.ConsumersSupervisor do
+defmodule ImageUploader.UploadAws.ConsumersSupervisor do
   use DynamicSupervisor
 
   def start_link(_) do

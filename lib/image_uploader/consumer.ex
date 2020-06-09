@@ -13,7 +13,6 @@ defmodule ImageUploader.Consumer do
   end
 
   def handle_events(events, _from, state) do
-    IO.inspect(Enum.count(events), label: "Total of events")
 
     for event <- events do
       IO.inspect({event, self()}, label: "Push to AWS: ")

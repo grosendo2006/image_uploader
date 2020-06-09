@@ -25,7 +25,6 @@ defmodule ImageUploader.Producer do
 
   @impl true
   def handle_demand(demand, state) when demand > 0 do
-    IO.inspect(demand, label: "Demand")
     {images, state} = Enum.split(state, demand)
 
     {:noreply, images, state}

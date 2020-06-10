@@ -9,11 +9,12 @@ defmodule ImageUploader.UploadAws.Consumer do
 
   def init(:ok) do
     {:consumer, :the_state_does_not_matter,
-     subscribe_to: [{ImageUploader.UploadAws.Producer, max_demand: @max_demand, min_demand: @min_demand}]}
+     subscribe_to: [
+       {ImageUploader.UploadAws.Producer, max_demand: @max_demand, min_demand: @min_demand}
+     ]}
   end
 
   def handle_events(events, _from, state) do
-
     for event <- events do
       IO.inspect({event, self()}, label: "Push to AWS: ")
       # Simulate time to upload AWS

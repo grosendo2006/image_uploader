@@ -53,3 +53,7 @@ seq 1 100000 | xargs -n1 -P 150 bash -c "curl --request POST \
 
 
 You can check the results in console where the server is running
+
+# Demo
+
+![Alt Text](./demo_uploader.gif)
